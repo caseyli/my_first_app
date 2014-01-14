@@ -1,0 +1,13 @@
+<h1>All News</h1>
+
+<p>
+	Welcome to the News section of my site. Here you'll find all the latest and greatest talk about me!
+</p>
+
+<ul>
+	<% @news_posts.each do |news_post| %>
+
+		<li><%= news_post.title %> -- <%= news_post.body %> </li>
+
+	<% end %>
+</ul>

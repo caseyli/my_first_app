@@ -1,9 +1,12 @@
 MyFirstApp::Application.routes.draw do
 
+  get "news_posts/index"
   get "/contact" => "pages#contact"
   get "/about" => "pages#about"
   get "/interesting_facts" => "pages#interesting_facts"
   get "/about_me" => "pages#about"
+
+  get "/news_posts" => "news_posts#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
