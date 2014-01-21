@@ -4,10 +4,14 @@
 	Welcome to the News section of my site. Here you'll find all the latest and greatest talk about me!
 </p>
 
+<%= link_to "Add New News Post", "/news_posts/new" %>
+
 <ul>
 	<% @news_posts.each do |news_post| %>
 
-		<li><%= news_post.title %> -- <%= news_post.body %> </li>
+		<li>
+			<%= link_to news_post.title, "/news_posts/#{news_post.id}"  %>
+		</li>
 
 	<% end %>
 </ul>

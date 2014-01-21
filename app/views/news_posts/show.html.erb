@@ -1,0 +1,21 @@
+<h1><%= @news_post.title %></h1>
+
+<p>
+	Body: <%= @news_post.body %>
+</p>
+
+<p>
+	ID: <%= @news_post.id %>
+</p>
+
+<p>
+	Updated: <%= @news_post.updated_at %>
+</p>
+
+<p>
+	Created: <%= @news_post.created_at %>
+</p>
+<%= link_to "Edit News Post with ID: #{@news_post.id}", 
+            "/news_posts/#{@news_post.id}/edit" %>
+
+<a href='/news_posts'>Back to all news</a>

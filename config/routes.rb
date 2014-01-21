@@ -6,7 +6,11 @@ MyFirstApp::Application.routes.draw do
   get "/interesting_facts" => "pages#interesting_facts"
   get "/about_me" => "pages#about"
 
+  # news_posts resource
   get "/news_posts" => "news_posts#index"
+  get "/news_posts/new" => "news_posts#new"
+  get "/news_posts/:id" => "news_posts#show"
+  get "/news_posts/:id/edit" => "news_posts#edit"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
