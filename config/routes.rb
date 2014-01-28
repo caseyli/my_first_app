@@ -8,6 +8,7 @@ MyFirstApp::Application.routes.draw do
 
   # news_posts resource
   get "/news_posts" => "news_posts#index"
+  post "/news_posts" => "news_posts#create"
   get "/news_posts/new" => "news_posts#new"
   get "/news_posts/:id" => "news_posts#show"
   get "/news_posts/:id/edit" => "news_posts#edit"
