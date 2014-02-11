@@ -1,5 +1,7 @@
 MyFirstApp::Application.routes.draw do
 
+  root "pages#home"
+
   get "news_posts/index"
   get "/contact" => "pages#contact"
   get "/about" => "pages#about"
@@ -7,13 +9,14 @@ MyFirstApp::Application.routes.draw do
   get "/about_me" => "pages#about"
 
   # news_posts resource
-  get "/news_posts" => "news_posts#index"
-  post "/news_posts" => "news_posts#create"
-  get "/news_posts/new" => "news_posts#new"
-  get "/news_posts/:id" => "news_posts#show", as: :news_post
-  get "/news_posts/:id/edit" => "news_posts#edit"
-  patch "/news_posts/:id" => "news_posts#update"
-  delete "/news_posts/:id" => "news_posts#destroy"
+  resources :news_posts
+  # get "/news_posts" => "news_posts#index"
+  # post "/news_posts" => "news_posts#create"
+  # get "/news_posts/new" => "news_posts#new"
+  # get "/news_posts/:id" => "news_posts#show", as: :news_post
+  # get "/news_posts/:id/edit" => "news_posts#edit"
+  # patch "/news_posts/:id" => "news_posts#update"
+  # delete "/news_posts/:id" => "news_posts#destroy"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

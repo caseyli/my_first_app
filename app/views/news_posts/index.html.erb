@@ -4,18 +4,8 @@
 	Welcome to the News section of my site. Here you'll find all the latest and greatest talk about me!
 </p>
 
-<%= link_to "Add New News Post", "/news_posts/new" %>
+<%= link_to "Add New News Post", new_news_post_path %>
 
 <ul>
-	<% @news_posts.each do |news_post| %>
-
-		<li>
-			<%= link_to news_post.title, "/news_posts/#{news_post.id}"  %>
-			<%= link_to "destroy", 
-			            "/news_posts/#{news_post.id}", 
-			            method: :delete,
-			            confirm: "Are you sure you want to delete the news post?" %>
-		</li>
-
-	<% end %>
+	<%= render @news_posts %>
 </ul>

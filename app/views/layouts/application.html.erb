@@ -8,20 +8,23 @@
 </head>
 <body>
 
-	<div class="header">
-		<div class="container">
-			Header	
+	<div class="header" id="header">
+		<div class="container" id="header-container">
+			<%= image_tag "myfirstapplogo.png" %>
 		</div>
 	</div>
 	
 	<div class="navigation">
 		<div class="container">
-			Navigation	
+			<%= link_to "Home", root_path, class: "nav-link" %>
+			<%= link_to "News", news_posts_path, class: "nav-link" %>
+			<%= link_to "Contact", contact_path, class: "nav-link" %>
+			<%= link_to "About", about_path, class: "nav-link" %>
 		</div>
 	</div>
 
-	<div class="middler">
-		<div class="container">
+	<div class="content">
+		<div class="container">x
 			<%= yield %>	
 		</div>
 	</div>

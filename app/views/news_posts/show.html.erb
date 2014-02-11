@@ -16,6 +16,6 @@
 	Created: <%= @news_post.created_at %>
 </p>
 <%= link_to "Edit News Post with ID: #{@news_post.id}", 
-            "/news_posts/#{@news_post.id}/edit" %>
+            edit_news_post_path %>
 
-<a href='/news_posts'>Back to all news</a>
+<%= link_to "Back to all news", news_posts_path %>

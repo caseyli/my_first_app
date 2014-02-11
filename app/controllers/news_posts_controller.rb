@@ -17,7 +17,7 @@ class NewsPostsController < ApplicationController
     @news_post = NewsPost.new(news_post_params)
 
     if @news_post.save
-      redirect_to "/news_posts/#{@news_post.id}"
+      redirect_to @news_post
     else
       # DO SOMETHING ELSE
     end
@@ -31,7 +31,7 @@ class NewsPostsController < ApplicationController
     @news_post = NewsPost.find(params[:id])
 
     if @news_post.update(news_post_params)
-      redirect_to "/news_posts/#{@news_post.id}"
+      redirect_to @news_post
     else
       # DO SOMETHING ELSE
     end
@@ -40,7 +40,7 @@ class NewsPostsController < ApplicationController
   def destroy
     @news_post = NewsPost.find(params[:id])
     @news_post.destroy
-    redirect_to "/news_posts"
+    redirect_to news_posts_path
   end
 
   private

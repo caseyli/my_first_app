@@ -1,0 +1,17 @@
+<%= form_for @news_post do |f| %>
+
+	<div>
+		<%= f.label :title %><br>
+		<%= f.text_field :title %>
+	</div>
+
+	<div>
+		<%= f.label :body %><br>
+		<%= f.text_field :body %>
+	</div>
+
+	<div>
+		<%= f.submit %>
+	</div>
+
+<% end %>

@@ -20,8 +20,29 @@ body {
 	color:white;
 }
 
-/* Middler Styling */
-.middler {
+.nav-link {
+	display:inline-block;
+	padding: 10px 15px;
+	text-decoration:none;
+	margin-right: 15px;
+	color:white;
+
+	&:hover {
+		background:#ccc;
+		color:black;
+	}
+
+	&:visited {
+		color:white;
+	}
+}
+
+.nav-link:visited {
+
+}
+
+/* Content Styling */
+.content {
 	background:#eeeeee;
 
 	h1 {
