@@ -1,3 +1,36 @@
 // Place all the styles related to the NewsPosts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.news-posts {
+
+	.news-post {
+
+		margin:20px 0;
+
+		.title {
+			background:black;
+			color:white;
+			padding:5px;
+			border-radius:10px 10px 0 0;
+			font-size:1.5em;
+		}
+
+		.body {
+			background:#ddd;			
+			padding:5px;
+		}
+
+		.actions {
+			background:#777;
+			padding:5px;
+
+			a {
+				color:black;
+				text-decoration:none;
+			}
+		}
+
+	}
+
+}
