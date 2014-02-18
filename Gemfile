@@ -5,6 +5,8 @@ gem 'rails', '4.0.0'
 
 gem 'pg'
 
+gem 'devise'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -31,6 +33,10 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :development do
+	gem 'pry'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -42,3 +48,6 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+ruby '2.0.0'
+#ruby-gemset=my_first_app
