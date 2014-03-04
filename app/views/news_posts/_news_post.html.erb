@@ -5,12 +5,18 @@
 	<div class="body">
 		<%= news_post.body %>
 	</div>
-	<div class="actions">
-		<%= link_to "edit", 
-            edit_news_post_path(news_post) %>
-		<%= link_to "destroy", 
-		            news_post, 
-		            method: :delete,
-		            confirm: "Are you sure you want to delete the news post?" %>	
-	</div>
+
+	<% if admin? %>
+
+		<div class="actions">
+			<%= link_to "edit", 
+		        edit_news_post_path(news_post) %>
+			<%= link_to "destroy", 
+			            news_post, 
+			            method: :delete,
+			            confirm: "Are you sure you want to delete the news post?" %>	
+		</div>
+
+	<% end %>
+	
 </div>

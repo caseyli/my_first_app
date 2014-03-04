@@ -4,7 +4,9 @@
 	Welcome to the News section of my site. Here you'll find all the latest and greatest talk about me!
 </p>
 
-<%= link_to "Add New News Post", new_news_post_path %>
+<% if admin? %>
+	<%= link_to "Add New News Post", new_news_post_path %>
+<% end %>
 
 <div class="news-posts">
 	<%= render @news_posts %>

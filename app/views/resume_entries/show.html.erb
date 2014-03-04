@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @resume_entry.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @resume_entry.body %>
+</p>
+
+<%= link_to 'Edit', edit_resume_entry_path(@resume_entry) %> |
+<%= link_to 'Back', resume_entries_path %>

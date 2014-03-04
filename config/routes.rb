@@ -1,5 +1,7 @@
 MyFirstApp::Application.routes.draw do
 
+  resources :resume_entries
+
   devise_for :users
   root "pages#home"
 
