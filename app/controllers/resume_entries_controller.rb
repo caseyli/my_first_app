@@ -1,4 +1,6 @@
 class ResumeEntriesController < ApplicationController
+
+  before_action :deny_access_for_non_admins, except: [:index, :show]
   before_action :set_resume_entry, only: [:show, :edit, :update, :destroy]
 
   # GET /resume_entries
@@ -69,6 +71,6 @@ class ResumeEntriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def resume_entry_params
-      params.require(:resume_entry).permit(:title, :body)
+      params.require(:resume_entry).permit(:title, :body, :start_date, :end_date)
     end
 end

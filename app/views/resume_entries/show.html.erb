@@ -10,5 +10,17 @@
   <%= @resume_entry.body %>
 </p>
 
-<%= link_to 'Edit', edit_resume_entry_path(@resume_entry) %> |
+<p>
+  <strong>Start Date:</strong>
+  <%= @resume_entry.start_date %>
+</p>
+
+<p>
+  <strong>End Date:</strong>
+  <%= @resume_entry.end_date %>
+</p>
+
+<% if admin? %>
+  <%= link_to 'Edit', edit_resume_entry_path(@resume_entry) %> |
+<% end %>
 <%= link_to 'Back', resume_entries_path %>
