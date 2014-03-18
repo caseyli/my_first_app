@@ -1,10 +1,37 @@
 <h1>CONTACT</h1>
-<h2><%= @date %></h2>
-<p>
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</p>
+
+<% if @success %>
+  Thank you for contacting us!
+<% else %>
+  <p>
+
+    <%= form_tag do %>
+
+      <div class="field">
+        <%= label_tag :first_name, "First Name" %><br>
+        <%= text_field_tag :first_name %>
+      </div>
+
+      <div class="field">
+        <%= label_tag :last_name, "Last Name" %><br>
+        <%= text_field_tag :last_name %>
+      </div>
+
+      <div class="field">
+        <%= label_tag :email, "E-mail" %><br>
+        <%= text_field_tag :email %>
+      </div>
+
+      <div class="field">
+        <%= label_tag :message %><br>
+        <%= text_field_tag :message %>
+      </div>
+
+      <div class="field">
+        <%= submit_tag "Submit" %>
+      </div>
+
+    <% end %>
+
+  </p>
+<% end %>
