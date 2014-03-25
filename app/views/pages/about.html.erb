@@ -7,3 +7,34 @@
 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 </p>
+
+<p>
+  <%= link_to "Click here for fun", "#", 
+              class: "red-bubble-link",
+              message: "Fun Link" %>
+
+  <%= link_to "Click here for terror", "#", 
+               class: "red-bubble-link",
+               message: "Terror Link" %>
+
+  <%= link_to "Click here for excitement", "#",
+               class: "red-bubble-link",
+               message: "Excitement Link" %>
+
+  <%= link_to "Click here for the wrath", "#",
+               class: "red-bubble-link",
+               message: "Wrath Link" %>
+
+   <%= link_to "Click here for the love", "#",
+                class: "red-bubble-link",
+                message: "Love Link" %>
+
+</p>
+
+
+<div id="link-results">
+  <div class="message">
+    
+  </div>
+  <%= link_to "Close", "#", id: "close-link-results" %>
+</div>
