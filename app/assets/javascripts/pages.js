@@ -10,7 +10,21 @@ $(function(){
 
 function redBubbleLinkClicked() {
   var message = $(this).attr("message");
-  $("#link-results .message").html(message);
-  $("#link-results").slideDown(400);
+
+  /* MAKING AN AJAX REQUEST */
+  $.ajax({ 
+    url: "/news_posts/1", 
+    dataType: "JSON", 
+    success: function(data, status, jqXHR){
+      message = data.id + " / " + data.title;
+      $("#link-results .message").html(message);
+      $("#link-results").slideDown(400);
+    }, 
+    error: function(jqXHR, status, errorThrown) {
+      alert("Error!");
+    }
+  });
+
+ 
   return false;
 }
