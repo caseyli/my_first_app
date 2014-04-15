@@ -8,6 +8,37 @@
 </head>
 <body>
 
+	<div class="contact-modal-dialog-bg" style="display:none">
+		<div class="contact-modal-dialog">
+			CONTACT
+
+			<div class="field">
+			  <%= label_tag :contact_first_name, "First Name" %><br>
+			  <%= text_field_tag :contact_first_name %>
+			</div>
+
+			<div class="field">
+			  <%= label_tag :contact_last_name, "Last Name" %><br>
+			  <%= text_field_tag :contact_last_name %>
+			</div>
+
+			<div class="field">
+			  <%= label_tag :contact_email, "E-mail" %><br>
+			  <%= text_field_tag :contact_email %>
+			</div>
+
+			<div class="field">
+			  <%= label_tag :contact_message %><br>
+			  <%= text_field_tag :contact_message %>
+			</div>
+
+			<div class="field">
+			  <%= link_to "Submit", "#", class: "contact-submit-link" %>
+			</div>
+		</div>
+	</div>
+
+
 	<div class="header" id="header">
 		<div class="container" id="header-container">
 			<%= image_tag "myfirstapplogo.png" %>
@@ -19,7 +50,7 @@
 			<%= link_to "Home", root_path, class: "nav-link" %>
 			<%= link_to "News", news_posts_path, class: "nav-link" %>
 			<%= link_to "Resume", resume_entries_path, class: "nav-link" %>
-			<%= link_to "Contact", contact_path, class: "nav-link" %>
+			<%= link_to "Contact", "#", class: "nav-link contact-link" %>
 			<%= link_to "About", about_path, class: "nav-link" %>
 
 			<% unless user_signed_in? %>
